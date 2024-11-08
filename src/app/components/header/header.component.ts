@@ -32,7 +32,6 @@ export class HeaderComponent implements AfterViewInit, CommonModule {
 
   @HostListener('window:resize', ['$event'])
   onWindowResize() {
-    console.log('onWindowResize');
     if (window.innerWidth < 768) {
       this.isCollapsed = true;
       this.isExpanded = false;

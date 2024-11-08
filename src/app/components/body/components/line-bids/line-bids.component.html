@@ -21,39 +21,39 @@
     </div>
     <div class="bid-pool-container pb-3" cdkDropListGroup>
         <div class="cast-information-container px-3">
-            <div class="row gy-3">
-                <div class="col-12 col-lg-4">
+            <div class="row gy-md-3">
+                <div class="col-12 col-md-4">
                     <div class="font-size-t6">
                         <b>
                             Employee Name
                         </b>
                     </div>
                 </div>
-                <div class="col-12 col-lg-8">
+                <div class="col-12 col-md-6 pb-3 pb-md-0">
                     <div class="font-size-t6">
                         William Thatcher
                     </div>
                 </div>
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-md-4">
                     <div class="font-size-t6">
                         <b>
-                            Seniority / Tenure Date
+                            Start Date
                         </b>
                     </div>
                 </div>
-                <div class="col-12 col-lg-8">
+                <div class="col-12 col-md-6 pb-3 pb-md-0">
                     <div class="font-size-t4">
                         12/25/2014<i class="font-size-t2"> (MM/DD/YYYY)</i>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-md-4">
                     <div class="font-size-t6">
                         <b>
                             Place In Line:
                         </b>
                     </div>
                 </div>
-                <div class="col-12 col-lg-8">
+                <div class="col-12 col-md-6 pb-3 pb-md-0">
                     <div class="font-size-t4 d-flex">
                         13 of 64
                     </div>
@@ -67,11 +67,11 @@
             </div>
             <div class="bid-lines-interactive saved-buttons px-3">
                 <div class="line-buttons-container col-12 d-flex justify-content-end flex-sm-row flex-column mb-3">
-                        <button (click)="selectAllSavedLines()" class="mb-sm-0 px-3" theme="primary" size="standard" role="button" tabindex="0">Highlight All</button>
-                        <button (click)="removeSavedLines()" class="ms-3 px-3" theme="primary" size="standard" role="button" tabindex="0">Remove Highlighted</button>
+                        <button (click)="selectAllSavedLines()" class="mb-sm-0 px-3 mb-2" theme="primary" size="standard" role="button" tabindex="0">Highlight All</button>
+                        <button (click)="removeSavedLines()" class="ms-sm-3 px-3" theme="primary" size="standard" role="button" tabindex="0">Remove Highlighted</button>
                 </div>
             </div>
-            <div 
+            <div
                 class="bid-lines saved-bid-lines mb-1 mx-3"
                 id="savedBidLines"
                 cdkDropList
@@ -106,11 +106,11 @@
                     </div>
                 </div>
                 <div class="line-buttons-container d-flex justify-content-end col-12 col-lg-6 flex-column flex-sm-row mb-3">
-                    <button (click)="selectAllVisibleLines()" class="mb-sm-0 px-3">Highlight All Visible</button>
-                    <button (click)="addPoolLinesToSaved()" class="ms-3 px-3">Add Highlighted</button>
+                    <button (click)="selectAllVisibleLines()" class="mb-sm-0 px-3 mb-2">Highlight All Visible</button>
+                    <button (click)="addPoolLinesToSaved()" class="ms-sm-3 px-3">Add Highlighted</button>
                 </div>
             </div>
-            <div 
+            <div
                 class="bid-lines bid-pool-lines mb-1 mx-3"
                 id="bidPoolLines"
                 cdkDropList

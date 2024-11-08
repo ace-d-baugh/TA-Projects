@@ -8,7 +8,7 @@
     position: relative;
     overflow: hidden;
   }
-  
+
   /* Saved Bid Lines Container */
   .saved-bid-lines-container,
   .bid-pool-lines-container {
@@ -17,7 +17,7 @@
     overflow: hidden;
     position: relative;
   }
-  
+
   /* Saved Bid Lines Header */
   .bid-lines-header,
   .saved-bid-lines-header,
@@ -28,12 +28,12 @@
     border-bottom: 1px solid var(--border-color);
     position: relative;
   }
-  
+
   /* Bid Pool Search */
   .bid-pool-search {
     position: relative;
   }
-  
+
   .bid-pool-search input {
     color: var(--text-color);
     background-color: var(--background-color);
@@ -41,13 +41,13 @@
     border: 1px solid var(--border-color);
     border-radius: 0.5rem;
   }
-  
+
   .bid-pool-search input:focus {
     border: 2px solid var(--border-color);
     outline: none;
     box-shadow: 0 0 10px var(--glow-color);
   }
-  
+
   /* Search Clear Button */
   .searchClearButton {
     position: absolute;
@@ -62,17 +62,17 @@
     padding: 5px 10px;
     cursor: pointer;
   }
-  
+
   .searchClearButton:hover {
     background-color: var(--primary-color);
     color: var(--text-color);
   }
-  
+
   /* Bid Pool Lines */
   .bid-pool-lines {
     filter: grayscale(0.5) hue-rotate(15deg);
   }
-  
+
   /* Bid Lines */
   .bid-lines {
     min-height: 100px;
@@ -83,7 +83,7 @@
     overflow-y: auto;
     user-select: none;
   }
-  
+
   /* Bid Line */
   .bid-line {
     padding: 10px;
@@ -92,7 +92,7 @@
     align-items: center;
     position: relative;
   }
-  
+
   .bid-line:not(:last-child)::after {
     content: '';
     position: absolute;
@@ -103,21 +103,21 @@
     background-color: var(--border-color);
     z-index: 99;
   }
-  
+
   /* Alternating Line Colors */
   .bid-line:nth-child(odd) {
     background-color: var(--secondary-color);
   }
-  
+
   .bid-line:nth-child(even) {
     background-color: var(--primary-color);
   }
-  
+
   .bid-line:hover {
     background-color: var(--hover-color);
     color: var(--background-color);
   }
-  
+
   /* Selected Bid Line */
   .bid-line.selected {
     position: relative;
@@ -125,7 +125,7 @@
     color: var(--text-color);
     transition: background-color 0.5s ease-out, color 0.5s ease-out;
   }
-  
+
   .bid-line.selected::after {
     content: '';
     position: absolute;
@@ -135,7 +135,7 @@
     height: 1px;
     background-color: var(--text-color);
   }
-  
+
   /* CDK Drag Preview */
   .cdk-drag-preview {
     background-color: var(--primary-color) !important;
@@ -146,7 +146,7 @@
     opacity: 0.75;
     border: 0;
   }
-  
+
   /* Help Icon */
   .help-icon {
     position: absolute;
@@ -158,12 +158,12 @@
     color: var(--text-color);
     border-radius: 10px;
   }
-  
+
   .help-icon:hover {
     color: var(--text-color);
     background-color: var(--primary-color);
   }
-  
+
   /* Helper Text Container */
   .helper-text-container {
     width: 0;
@@ -182,7 +182,7 @@
     display: flex;
     justify-content: center;
   }
-  
+
   .helper-text-container.show {
     opacity: 1;
     top: 5%;
@@ -196,7 +196,7 @@
     overflow-y: auto;
     z-index: 999;
   }
-  
+
   .helper-text-container.show::after {
     content: 'close';
     position: absolute;
@@ -204,11 +204,11 @@
     right: 20px;
     font-size: 1.25rem;
   }
-  
+
   .helper-text-container.show:hover::after {
     cursor: pointer;
   }
-  
+
   /* Font Sizes */
   .font-size-t2 {
     font-size: 0.75rem;
@@ -217,15 +217,15 @@
   .font-size-t4 {
     font-size: 1.25rem;
   }
-  
+
   .font-size-t6 {
     font-size: 1.5rem;
   }
-  
+
   .font-size-t8 {
     font-size: 1.75rem;
   }
-  
+
   /* Button Styles */
   button {
     cursor: pointer;
@@ -235,6 +235,7 @@
     color: var(--background-color);
     border-radius: 50px;
     padding: 10px;
+    transition: all 0.2s ease;
   }
 
   button:hover {
