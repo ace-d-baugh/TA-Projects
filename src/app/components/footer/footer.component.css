@@ -1,0 +1,25 @@
+.footer {
+  margin-top: 2rem;
+  padding: 3rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -20px 0 20px var(--glow-color);
+}
+
+p a {
+  padding: 1rem 0;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+p a:hover {
+    color: var(--hover-color);
+}
+
+p a.active {
+    color: var(--primary-color);
+}
