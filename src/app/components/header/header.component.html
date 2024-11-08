@@ -1,0 +1,40 @@
+<div class="force-field" [ngClass]="{'shields-up': raiseShields}"></div>
+<div class="navbar">
+  <div class="logo">
+    Multiline Select and Sort
+  </div>
+  <div class="nav-links" *ngIf="!isCollapsed">
+    <ul>
+      <li><a href="https://digitalelegance.com/finecode/">Home</a></li>
+      <li><a href="/">Application</a></li>
+      <li><a href="/about">About App</a></li>
+    </ul>
+  </div>
+  <button class="navbar-toggler" type="button" (click)="toggleMenu()" *ngIf="isCollapsed">
+    <ng-icon name="bootstrapList"></ng-icon>
+  </button>
+  <div class="nav-links side-menu" *ngIf="isExpanded && isCollapsed">
+    <ul>
+      <li><a href="https://digitalelegance.com/finecode/">Home</a></li>
+      <li><a href="/">Application</a></li>
+      <li><a href="/about">About App</a></li>
+    </ul>
+  </div>
+</div>
+<div class="profile-picture">
+    <div class="session-timer">
+        <div class="circle" #circle></div>
+        <div class="circle-timer">
+            <div class="circle-image">
+                    <img id="user-img" class="rounded-circle" [src]="'/Jenson.jpg'" />
+            </div>
+            <div class="countdown w-100">
+                <p class="caption">Time Remaining:<br/><ng-container *ngIf="minutesUntilTimeout > 0" class="timer">{{ minutesUntilTimeout }}</ng-container><ng-container *ngIf="minutesUntilTimeout > 1"> Minutes</ng-container><ng-container *ngIf="minutesUntilTimeout == 1"> Minute</ng-container><ng-container *ngIf="minutesUntilTimeout < 1">{{ secondsUntilTimeout  }} Seconds</ng-container></p>
+            </div>
+            <div class="info-box">
+                <h4 class="info-header">Session Countdown</h4>
+                <p class="info-text">This sessoin will expire in <b>{{ minutesUntilTimeout }}:<ng-container *ngIf="secondsUntilTimeout < 10">0</ng-container>{{ secondsUntilTimeout }}</b>. Please save your work before that time.</p>
+            </div>
+        </div>
+    </div>
+</div>
