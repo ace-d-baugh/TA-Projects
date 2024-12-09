@@ -7,7 +7,6 @@ import { CommonModule } from '@angular/common';
 import { LineBidRank } from '../../../../interfaces/line-bid-rank';
 import { Answer } from '../../../../interfaces/answers';
 import { CdkDragDrop, DragRef, moveItemInArray, transferArrayItem, DragDropModule } from '@angular/cdk/drag-drop';
-import _ from 'lodash';
 import { data } from './data/example-data';
 import { FormsModule } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
@@ -91,7 +90,7 @@ export class LineBidsComponent implements OnInit {
       this.lastSingleSelection = index;
     } else if (event.metaKey || event.ctrlKey) {
       if (line.isSelected) {
-        this.selections = _.filter(this.selections, l => l !== line);
+        this.selections = this.selections.filter(l => l !== line);
         line.isSelected = false;
         this.lastSingleSelection = -1;
       } else {
@@ -109,8 +108,8 @@ export class LineBidsComponent implements OnInit {
 
       // Clear previous shift selection
       if (this.currentSelectionSpan && this.currentSelectionSpan.length > 0) {
-        _.each(this.currentSelectionSpan, i => {
-          this.selections = _.filter(this.selections, l => l !== line);
+        this.currentSelectionSpan.forEach(i => {
+          this.selections = this.selections.filter(l => l !== line);
           line.isSelected = false;
         });
         this.selections = [];
@@ -118,23 +117,23 @@ export class LineBidsComponent implements OnInit {
       }
 
       // Build the new selection span
-      _.times(count, c => {
+      for (let c = 0; c < count; c++) {
         if (newSelectionBefore) {
           this.currentSelectionSpan.push(this.lastSingleSelection - c);
         } else {
           this.currentSelectionSpan.push(this.lastSingleSelection + c);
         }
-      });
+      };
 
-      _.each(this.currentSelectionSpan, (i) => {
-        if (!_.includes(this.selections, lines[i])) {
+      this.currentSelectionSpan.forEach(i => {
+        if (!this.selections.includes(lines[i])) {
           lines[i].isSelected = true;
           this.selections.push(lines[i]);
           this.sortArray(this.selections);
         }
       });
     } else {
-      const alreadySelected = _.find(this.selections, s => s === line);
+      const alreadySelected = this.selections.find(s => s === line);
       if ((!alreadySelected && !event.shiftKey) ||
         (alreadySelected && this.selections.length > 1)) {
         this.deselectAllSavedLines();
